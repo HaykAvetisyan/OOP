@@ -6,26 +6,26 @@ public class DynamicArray {
     private int size = 0;
 
     public void add(int value) {
-        size = size + 1;
+        size++;
+
         if (size == array.length) {
             extend();
         }
-        array[size-1] = value;
+        array[size] = value;
     }
 
 
     private void extend() {
         int[] newArr = new int[array.length + 10];
-        int ind = -1;
+
         for (int i = 0; i < array.length; i++) {
-            ind++;
-            newArr[ind] = array[i];
+            newArr[i] = array[i];
         }
        array = newArr;
     }
 
     public void print() {
-        for (int i = 0; i < size; i++) {
+        for (int i = 1; i < array.length; i++) {
             System.out.println(array[i]);
         }
 
