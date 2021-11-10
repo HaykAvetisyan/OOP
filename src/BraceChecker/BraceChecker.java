@@ -4,14 +4,13 @@ public class BraceChecker {
 
     private String text;
 
-    //կլասսի կոնստրուկտորն է, որը պետք է ընդունի String տիպի տեքստ, և վերագրի վերևի տեքստին
-    //Որ չկարողանանք BraceChecker-ի օբյեկտը սարքենք առանց text-տալու կոնստրուկտորի միջոցով․
+    
     public BraceChecker(String text) {
         this.text = text;
 
     }
 
-    //սա հիմնական մեթոդն է, որի մեջ գրելու ենք ամբողջ լոգիկան․ աշխատելու ենք թե stack-ի հետ, թե վերևի text-ի
+    
     public void check() {
         Stack st = new Stack();
         char ar[] = text.toCharArray();
